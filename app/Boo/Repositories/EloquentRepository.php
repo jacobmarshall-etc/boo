@@ -26,4 +26,12 @@ abstract class EloquentRepository {
 		return $this->model->findOrFail($id);
 	}
 
+	/**
+	 * @return \Illuminate\Database\Eloquent\Collection
+	 */
+	function getAll()
+	{
+		return $this->model->all();
+	}
+
 }

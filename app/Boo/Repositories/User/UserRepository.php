@@ -8,4 +8,9 @@ interface UserRepository {
 	 */
 	public function getById($id);
 
+	/**
+	 * @return mixed
+	 */
+	public function getAll();
+
 }
