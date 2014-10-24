@@ -1,9 +1,9 @@
-<?php namespace Boo\Repositories\Photo;
+<?php namespace Boo\Repositories\Photos;
 
 use Boo\Repositories\EloquentRepository;
 use Photo;
 
-class EloquentPhotoRepository extends EloquentRepository implements PhotoRepository {
+class EloquentPhotosRepository extends EloquentRepository implements PhotosRepository {
 
 	/**
 	 * @param Photo $model

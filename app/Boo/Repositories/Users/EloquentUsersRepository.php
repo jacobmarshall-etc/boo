@@ -1,9 +1,9 @@
-<?php namespace Boo\Repositories\User;
+<?php namespace Boo\Repositories\Users;
 
 use Boo\Repositories\EloquentRepository;
 use User;
 
-class EloquentUserRepository extends EloquentRepository implements UserRepository {
+class EloquentUsersRepository extends EloquentRepository implements UsersRepository {
 
 	/**
 	 * @param User $model

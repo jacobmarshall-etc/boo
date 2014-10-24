@@ -11,8 +11,8 @@ class RepositoriesServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app->bind('Boo\Repositories\User\UserRepository', 'Boo\Repositories\User\EloquentUserRepository');
-		$this->app->bind('Boo\Repositories\Photo\PhotoRepository', 'Boo\Repositories\Photo\EloquentPhotoRepository');
+		$this->app->bind('Boo\Repositories\Users\UsersRepository', 'Boo\Repositories\Users\EloquentUsersRepository');
+		$this->app->bind('Boo\Repositories\Photos\PhotoRepository', 'Boo\Repositories\Photos\EloquentPhotoRepository');
 	}
 
 }
