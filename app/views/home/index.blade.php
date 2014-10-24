@@ -1,5 +1,15 @@
 @extends('layouts.master')
 
 @section('content')
-    <h2>Boo Photos</h2>
+    <div class="container">
+        @include('partials.header')
+
+        <section class="media-grid">
+            @foreach ($photos as $media)
+                @include('partials.media', ['media' => $media])
+            @endforeach
+        </section>
+
+        @include('partials.footer')
+    </div>
 @stop
