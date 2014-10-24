@@ -18,8 +18,7 @@ abstract class EloquentRepository {
 	}
 
 	/**
-	 * @param mixed $id
-	 * @return \Illuminate\Support\Collection
+	 * {@inheritdoc}
 	 */
 	function getById($id)
 	{
@@ -27,7 +26,7 @@ abstract class EloquentRepository {
 	}
 
 	/**
-	 * @return \Illuminate\Support\Collection
+	 * {@inheritdoc}
 	 */
 	function getAll()
 	{
