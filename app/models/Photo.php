@@ -9,7 +9,7 @@ class Photo extends Eloquent {
 	 *
 	 * @var string
 	 */
-	protected $table = 'users';
+	protected $table = 'photos';
 
 	/**
 	 * The addition columns to use as carbon objects.
