@@ -13,4 +13,4 @@ class EloquentUsersRepository extends EloquentRepository implements UsersReposit
 		parent::__construct($model);
 	}
 
-} 
+}

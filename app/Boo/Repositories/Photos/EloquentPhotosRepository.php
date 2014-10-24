@@ -13,4 +13,4 @@ class EloquentPhotosRepository extends EloquentRepository implements PhotosRepos
 		parent::__construct($model);
 	}
 
-} 
+}

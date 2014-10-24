@@ -13,4 +13,4 @@ interface Repository {
 	 */
 	public function getAll();
 
-} 
+}
