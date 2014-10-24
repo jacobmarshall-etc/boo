@@ -27,7 +27,7 @@ abstract class EloquentRepository {
 	}
 
 	/**
-	 * @return \Illuminate\Database\Eloquent\Collection
+	 * @return \Illuminate\Support\Collection
 	 */
 	function getAll()
 	{

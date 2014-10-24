@@ -4,12 +4,12 @@ interface UserRepository {
 
 	/**
 	 * @param $id
-	 * @return mixed
+	 * @return \Illuminate\Support\Collection
 	 */
 	public function getById($id);
 
 	/**
-	 * @return mixed
+	 * @return \Illuminate\Support\Collection
 	 */
 	public function getAll();
 
