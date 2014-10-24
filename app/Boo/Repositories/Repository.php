@@ -1,6 +1,6 @@
-<?php namespace Boo\Repositories\User;
+<?php namespace Boo\Repositories;
 
-interface UserRepository {
+interface Repository {
 
 	/**
 	 * @param $id
@@ -13,4 +13,4 @@ interface UserRepository {
 	 */
 	public function getAll();
 
-}
+} 
