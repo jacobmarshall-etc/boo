@@ -33,7 +33,7 @@ class PhotosController extends BaseController {
 	}
 
 	/**
-	 * Display a specified photo.
+	 * Display a specific photo.
 	 *
 	 * @param string $id
 	 * @return mixed
