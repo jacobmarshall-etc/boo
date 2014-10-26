@@ -6,7 +6,7 @@
 
         <section class="media-grid">
             @foreach ($photos as $media)
-                @include('partials.media', ['media' => $media])
+                @include('partials.media')
             @endforeach
         </section>
 
