@@ -54,7 +54,7 @@ return array(
 			'password'  => getenv('DB_PASS'),
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
-			'prefix'    => getenv('DB_PREFIX'),
+			'prefix'    => '',
 		),
 
 	),
