@@ -13,4 +13,12 @@ class EloquentPhotosRepository extends EloquentRepository implements PhotosRepos
 		parent::__construct($model);
 	}
 
+	/**
+	 * {@inheritdoc}
+	 */
+	public function getAll()
+	{
+		return $this->model->remember(10)->orderBy('published_at', 'desc')->get();
+	}
+
 }
