@@ -35,6 +35,27 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 
 /*
 |--------------------------------------------------------------------------
+| Trusted Proxies
+|--------------------------------------------------------------------------
+|
+| Here are the registered, trusted, proxies that Laravel should recognise.
+| But more specifically, recognise for relative protocol reasons.
+|
+*/
+
+App::before(function(\Illuminate\Http\Request $request)
+{
+	$proxiesPath = storage_path().'/meta/proxies.json';
+
+	if (File::exists($proxiesPath))
+	{
+		$ips = json_decode(File::get($proxiesPath));
+		$request->setTrustedProxies($ips);
+	}
+});
+
+/*
+|--------------------------------------------------------------------------
 | Application Error Handler
 |--------------------------------------------------------------------------
 |
