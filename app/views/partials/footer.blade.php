@@ -1,4 +1,5 @@
 <footer class="footer">
+    <br>
     <p>
         Developed by <a href="https://jacobmarshall.co" target="_blank" title="https://jacobmarshall.co">Jacob Marshall</a>
         &nbsp;&ndash;&nbsp;
