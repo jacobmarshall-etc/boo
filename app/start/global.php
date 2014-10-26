@@ -85,7 +85,12 @@ App::error(function(Exception $exception, $code)
 
 App::down(function()
 {
-	return Response::make("Be right back!", 503);
+	return Response::view('errors.down', [], 503);
+});
+
+App::missing(function()
+{
+	return Response::view('errors.missing', [], 404);
 });
 
 /*
