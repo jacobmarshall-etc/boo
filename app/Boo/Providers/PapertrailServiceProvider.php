@@ -13,13 +13,14 @@ class PapertrailServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$monolog = \Log::getMonolog();
-		$syslog = new SyslogHandler('papertrail');
-
-		$formatter = new LineFormatter('%channel%.%level_name%: %message% %extra%');
-		$syslog->setFormatter($formatter);
-
-		$monolog->pushHandler($syslog);
+//		$log = $this->app->make('log')->getMonolog();
+//
+//		$syslog = new SyslogHandler('papertrail');
+//
+//		$formatter = new LineFormatter('%channel%.%level_name%: %message% %extra%');
+//		$syslog->setFormatter($formatter);
+//
+//		$log->pushHandler($syslog);
 	}
 
 }
