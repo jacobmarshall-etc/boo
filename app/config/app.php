@@ -122,8 +122,10 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
-		'Boo\Providers\RepositoriesServiceProvider',
 		'Bugsnag\BugsnagLaravel\BugsnagLaravelServiceProvider',
+
+		'Boo\Providers\RepositoriesServiceProvider',
+		'Boo\Providers\PapertrailServiceProvider',
 
 	),
 
