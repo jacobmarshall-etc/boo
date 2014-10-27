@@ -3,6 +3,7 @@
 use Illuminate\Support\ServiceProvider;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\SyslogHandler;
+use Log;
 
 class PapertrailServiceProvider extends ServiceProvider {
 
@@ -11,16 +12,20 @@ class PapertrailServiceProvider extends ServiceProvider {
 	 *
 	 * @see http://mattstauffer.co/blog/laravel-forge-logging-with-papertrail
 	 */
-	public function register()
+	public function boot()
 	{
-//		$log = $this->app->make('log')->getMonolog();
-//
-//		$syslog = new SyslogHandler('papertrail');
-//
-//		$formatter = new LineFormatter('%channel%.%level_name%: %message% %extra%');
-//		$syslog->setFormatter($formatter);
-//
-//		$log->pushHandler($syslog);
+		$log = Log::getMonolog();
+		$papertrail = new SyslogHandler('papertrail');
+
+		$formatter = new LineFormatter('%channel%.%level_name%: %message% %extra%');
+		$papertrail->setFormatter($formatter);
+
+		$log->pushHandler($papertrail);
 	}
+
+	/**
+	 * @return void
+	 */
+	public function register() {}
 
 }
