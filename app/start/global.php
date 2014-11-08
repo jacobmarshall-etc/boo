@@ -45,7 +45,7 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 
 App::before(function(\Illuminate\Http\Request $request)
 {
-	$proxiesPath = storage_path().'/meta/proxies.json';
+	$proxiesPath = storage_path().'/app/proxies.json';
 
 	if (File::exists($proxiesPath))
 	{
