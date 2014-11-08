@@ -1,0 +1,37 @@
+@import 'colors';
+@import 'mixins';
+
+.navbar-nav {
+    > ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        @extend %clearfix;
+
+        > li {
+            float: left;
+
+            > a {
+                display: block;
+                padding: 6px 12px;
+            }
+        }
+    }
+}
+
+.navbar-header {
+    overflow: hidden;
+}
+
+@mixin navbar($name, $nav-color, $header-color) {
+    .navbar-#{$name} {
+        .navbar-nav {
+            background-color: $nav-color;
+        }
+        .navbar-header {
+            background-color: $header-color;
+        }
+    }
+}
+
+@include navbar('cyan', $color-cyan-800, $color-cyan-500);

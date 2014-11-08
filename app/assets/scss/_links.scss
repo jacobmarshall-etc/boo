@@ -1,0 +1,56 @@
+@import 'mixins';
+@import 'variables';
+
+a {
+    position: relative;
+    display: inline-block;
+    color: $link-color;
+    text-decoration: none;
+    transition: color .2s;
+    z-index: 1;
+}
+
+a:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: -1;
+    border-radius: 3px;
+    transition: opacity .2s,
+                top .2s,
+                left .2s,
+                right .2s,
+                bottom .2s;
+}
+
+a:before {
+    background-color: $link-color;
+}
+
+a:hover,
+a:active {
+    color: #fff;
+}
+
+a:hover:before,
+a:active:before {
+    top: -4px;
+    left: -8px;
+    right: -8px;
+    bottom: -4px;
+    opacity: 1;
+}
+
+a:active:before {
+    background-color: $link-active-color;
+}
+
+.pulse {
+    &:not(:hover):not(:active):before {
+        @include animation('pulse 1.5s ease-in-out infinite');
+    }
+}

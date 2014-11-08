@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('flags', 'module-home')
+
 @section('content')
     <div class="container">
         @include('partials.header')
