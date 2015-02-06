@@ -1,8 +1,0 @@
-{
-    "name": "boo",
-    "version": "0.0.0-dev",
-    "devDependencies": {
-        "jquery": "2.1.x",
-        "normalize": "normalize-scss#3.0.x"
-    }
-}
